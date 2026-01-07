@@ -196,6 +196,18 @@
     z-index: 2;
   }
 
+  /* 遮罩层 */
+  .navbar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: transparent;
+    z-index: 99998;
+    animation: fadeIn 0.3s ease;
+  }
+
   @keyframes fadeIn {
     from {
       opacity: 0;

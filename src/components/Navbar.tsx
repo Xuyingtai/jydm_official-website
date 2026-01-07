@@ -72,6 +72,12 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
+      {isMenuOpen && (
+        <div 
+          className="navbar-overlay"
+          onClick={() => setIsMenuOpen(false)}
+        ></div>
+      )}
     </>
   )
 }
