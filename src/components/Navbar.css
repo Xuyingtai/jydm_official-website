@@ -135,9 +135,8 @@
     margin: 0;
     border: none;
     list-style: none;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: -4px 4px 20px rgba(0, 0, 0, 0.3);
     border-radius: 0 0 0 12px;
-    pointer-events: auto;
   }
 
   .navbar-menu.active {
@@ -170,11 +169,9 @@
     text-decoration: none;
     transition: all 0.3s ease;
     position: relative;
-    z-index: 100000;
+    z-index: 1;
     background: transparent;
     line-height: 1.4;
-    pointer-events: auto;
-    cursor: pointer;
   }
 
   .navbar-menu li a:hover,
@@ -197,28 +194,6 @@
     width: 4px;
     background: linear-gradient(180deg, var(--neon-blue), var(--neon-purple));
     z-index: 2;
-  }
-
-  /* 遮罩层 */
-  .navbar-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: transparent;
-    z-index: 99998;
-    animation: fadeIn 0.3s ease;
-    pointer-events: auto;
-  }
-  
-  /* 确保菜单在遮罩层之上，且可以接收点击事件 */
-  .navbar-menu.active {
-    pointer-events: auto;
-  }
-  
-  .navbar-menu.active li a {
-    pointer-events: auto;
   }
 
   @keyframes fadeIn {
