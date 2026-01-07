@@ -13,6 +13,18 @@ const AIGC = () => {
       <div className="section">
         <div className="container">
           <div className="aigc-intro">
+            <div className="intro-button-wrapper">
+              <a 
+                href="https://ai.zzjydm.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="cta-button intro-button"
+              >
+                <span className="button-text">进入创作平台</span>
+                <span className="button-icon">→</span>
+                <span className="button-glow"></span>
+              </a>
+            </div>
             <h2>关于AIGC创作平台</h2>
             <p>
               AIGC（AI Generated Content）创作平台是我们利用人工智能技术打造的创新内容创作平台。
@@ -50,6 +62,7 @@ const AIGC = () => {
           </div>
         </div>
       </div>
+
     </div>
   )
 }

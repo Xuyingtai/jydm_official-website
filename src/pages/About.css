@@ -43,7 +43,7 @@
 }
 
 .certifications li::before {
-  content: 'âœ?;
+  content: 'â€¢';
   position: absolute;
   left: 0;
   color: var(--primary-color);
@@ -156,7 +156,7 @@
 }
 
 .timeline-content li::before {
-  content: 'â€?;
+  content: 'â€¢';
   position: absolute;
   left: 0;
   color: var(--primary-color);
@@ -221,5 +221,3 @@
     grid-template-columns: 1fr;
   }
 }
-
-

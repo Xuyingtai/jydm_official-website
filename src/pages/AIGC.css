@@ -4,9 +4,111 @@
   text-align: center;
 }
 
+.intro-button-wrapper {
+  margin-bottom: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1.2rem 3rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  background: linear-gradient(135deg, var(--neon-blue), var(--neon-purple));
+  border-radius: 50px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 
+    0 10px 30px rgba(59, 130, 246, 0.4),
+    0 0 40px rgba(168, 85, 247, 0.3),
+    inset 0 0 20px rgba(255, 255, 255, 0.1);
+  border: 2px solid transparent;
+  cursor: pointer;
+  z-index: 1;
+  animation: buttonPulse 3s ease-in-out infinite;
+}
+
+.intro-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transition: left 0.6s ease;
+}
+
+.intro-button:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 
+    0 15px 40px rgba(59, 130, 246, 0.6),
+    0 0 60px rgba(168, 85, 247, 0.5),
+    inset 0 0 30px rgba(255, 255, 255, 0.2);
+  background: linear-gradient(135deg, var(--neon-purple), var(--neon-pink));
+}
+
+.intro-button:hover::before {
+  left: 100%;
+}
+
+.intro-button:active {
+  transform: translateY(-2px) scale(1.02);
+}
+
+.intro-button .button-text {
+  position: relative;
+  z-index: 2;
+  letter-spacing: 0.1em;
+}
+
+.intro-button .button-icon {
+  position: relative;
+  z-index: 2;
+  font-size: 1.5rem;
+  transition: transform 0.4s ease;
+}
+
+.intro-button:hover .button-icon {
+  transform: translateX(5px);
+}
+
+.intro-button .button-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s ease, height 0.6s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.intro-button:hover .button-glow {
+  width: 300px;
+  height: 300px;
+}
+
 .aigc-intro h2 {
   font-size: 2.5rem;
   margin-bottom: 2rem;
+  margin-top: 3rem;
   color: var(--text-primary);
 }
 
@@ -14,6 +116,7 @@
   font-size: 1.1rem;
   line-height: 1.8;
   color: var(--text-secondary);
+  text-align: left;
 }
 
 .news-section {
@@ -123,13 +226,196 @@
   line-height: 1.6;
 }
 
+.cta-section {
+  background: linear-gradient(135deg, var(--bg-darker) 0%, var(--bg-card) 100%);
+  padding: 6rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 50%, rgba(168, 85, 247, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.cta-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.cta-title {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  background: linear-gradient(
+    135deg,
+    var(--neon-blue),
+    var(--neon-purple),
+    var(--neon-pink),
+    var(--neon-blue)
+  );
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: titleShimmer 3s ease-in-out infinite;
+}
+
+@keyframes titleShimmer {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.cta-description {
+  font-size: 1.3rem;
+  color: var(--text-secondary);
+  margin-bottom: 3rem;
+  line-height: 1.6;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1.2rem 3rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  background: linear-gradient(135deg, var(--neon-blue), var(--neon-purple));
+  border-radius: 50px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 
+    0 10px 30px rgba(59, 130, 246, 0.4),
+    0 0 40px rgba(168, 85, 247, 0.3),
+    inset 0 0 20px rgba(255, 255, 255, 0.1);
+  border: 2px solid transparent;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.cta-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transition: left 0.6s ease;
+}
+
+.cta-button:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 
+    0 15px 40px rgba(59, 130, 246, 0.6),
+    0 0 60px rgba(168, 85, 247, 0.5),
+    inset 0 0 30px rgba(255, 255, 255, 0.2);
+  background: linear-gradient(135deg, var(--neon-purple), var(--neon-pink));
+}
+
+.cta-button:hover::before {
+  left: 100%;
+}
+
+.cta-button:active {
+  transform: translateY(-2px) scale(1.02);
+}
+
+.button-text {
+  position: relative;
+  z-index: 2;
+  letter-spacing: 0.1em;
+}
+
+.button-icon {
+  position: relative;
+  z-index: 2;
+  font-size: 1.5rem;
+  transition: transform 0.4s ease;
+}
+
+.cta-button:hover .button-icon {
+  transform: translateX(5px);
+}
+
+.button-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s ease, height 0.6s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.cta-button:hover .button-glow {
+  width: 300px;
+  height: 300px;
+}
+
+/* 添加脉冲动画效果 */
+@keyframes buttonPulse {
+  0%, 100% {
+    box-shadow: 
+      0 10px 30px rgba(59, 130, 246, 0.4),
+      0 0 40px rgba(168, 85, 247, 0.3);
+  }
+  50% {
+    box-shadow: 
+      0 10px 40px rgba(59, 130, 246, 0.6),
+      0 0 60px rgba(168, 85, 247, 0.5);
+  }
+}
+
+.cta-button {
+  animation: buttonPulse 3s ease-in-out infinite;
+}
+
 @media (max-width: 768px) {
   .aigc-intro h2 {
     font-size: 2rem;
+    margin-top: 2rem;
   }
 
   .features-grid {
     grid-template-columns: 1fr;
+  }
+
+  .intro-button {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+  }
+
+  .aigc-intro p {
+    text-align: center;
   }
 }
 
