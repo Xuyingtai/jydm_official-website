@@ -56,7 +56,10 @@ const Navbar = () => {
               <span></span>
             </button>
 
-            <ul className={`navbar-menu ${isMenuOpen ? 'active' : ''}`}>
+            <ul 
+              className={`navbar-menu ${isMenuOpen ? 'active' : ''}`}
+              onClick={(e) => e.stopPropagation()}
+            >
               {navItems.map((item) => (
                 <li key={item.path}>
                   <Link
