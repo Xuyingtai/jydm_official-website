@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import './Navbar.css'
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const location = useLocation()
+  const navigate = useNavigate()
 
   // 当菜单打开时，阻止body滚动
   useEffect(() => {
@@ -58,17 +59,28 @@ const Navbar = () => {
 
             <ul 
               className={`navbar-menu ${isMenuOpen ? 'active' : ''}`}
-              onClick={(e) => e.stopPropagation()}
+              onClick={(e) => {
+                // 阻止点击菜单容器时冒泡到遮罩层
+                e.stopPropagation()
+              }}
             >
               {navItems.map((item) => (
                 <li key={item.path}>
-                  <Link
-                    to={item.path}
+                  <a
+                    href={item.path}
                     className={isActive(item.path) ? 'active' : ''}
-                    onClick={() => setIsMenuOpen(false)}
+                    onClick={(e) => {
+                      e.preventDefault()
+                      // 阻止事件冒泡
+                      e.stopPropagation()
+                      // 关闭菜单
+                      setIsMenuOpen(false)
+                      // 使用navigate进行导航
+                      navigate(item.path)
+                    }}
                   >
                     {item.label}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>

@@ -209,6 +209,16 @@
     background: transparent;
     z-index: 99998;
     animation: fadeIn 0.3s ease;
+    pointer-events: auto;
+  }
+  
+  /* 确保菜单在遮罩层之上，且可以接收点击事件 */
+  .navbar-menu.active {
+    pointer-events: auto;
+  }
+  
+  .navbar-menu.active li a {
+    pointer-events: auto;
   }
 
   @keyframes fadeIn {
