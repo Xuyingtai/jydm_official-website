@@ -118,7 +118,9 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: #0a0e27;
+    background: rgba(10, 14, 39, 0.5);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     flex-direction: column;
     padding: 5rem 0 2rem;
     transform: translateX(-100%);
