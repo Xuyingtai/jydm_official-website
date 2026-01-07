@@ -141,30 +141,27 @@ const Home = () => {
       <section className="section aigc-section">
         <div className="container">
           <h2 className="section-title">AIGC创作平台</h2>
-          <div className="aigc-content">
-            <div className="aigc-item">
-              <span className="aigc-label">资讯</span>
-              <span className="aigc-date">2019-12-20</span>
-              <h3>岳云鹏与老子爷爷</h3>
+          <div className="features-grid">
+            <div className="feature-card">
+              <div className="feature-icon">🤖</div>
+              <h3>AI辅助创作</h3>
+              <p>利用AI技术辅助动画创作，提高创作效率，降低制作成本</p>
             </div>
-            <div className="aigc-item">
-              <span className="aigc-label">资讯</span>
-              <span className="aigc-date">2019-12-20</span>
-              <h3>老子爷爷微信表情第二弹上线啦！</h3>
+            <div className="feature-card">
+              <div className="feature-icon">🎨</div>
+              <h3>智能风格转换</h3>
+              <p>一键转换动画风格，快速适配不同项目需求</p>
             </div>
-            <div className="aigc-item">
-              <span className="aigc-label">资讯</span>
-              <span className="aigc-date">2019-12-20</span>
-              <h3>老子爷爷获奖了</h3>
+            <div className="feature-card">
+              <div className="feature-icon">⚡</div>
+              <h3>快速生成</h3>
+              <p>快速生成动画素材和内容，缩短项目周期</p>
             </div>
-            <div className="aigc-item">
-              <span className="aigc-label">资讯</span>
-              <span className="aigc-date">2020-03-11</span>
-              <h3>2020农历庚子年二月十五日老子诞辰2591周年</h3>
+            <div className="feature-card">
+              <div className="feature-icon">🔧</div>
+              <h3>专业工具</h3>
+              <p>提供专业的AI创作工具，满足专业制作需求</p>
             </div>
-          </div>
-          <div className="text-center" style={{ marginTop: '2rem' }}>
-            <Link to="/aigc" className="btn btn-outline">查看更多资讯</Link>
           </div>
         </div>
       </section>
