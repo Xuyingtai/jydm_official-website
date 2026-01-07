@@ -73,13 +73,10 @@ const Navbar = () => {
         </div>
       </nav>
       {isMenuOpen && (
-        <>
-          <div 
-            className="navbar-overlay"
-            onClick={() => setIsMenuOpen(false)}
-          ></div>
-          {/* 菜单在遮罩层之后渲染，确保在DOM顺序上也在上方 */}
-        </>
+        <div 
+          className="navbar-overlay"
+          onClick={() => setIsMenuOpen(false)}
+        ></div>
       )}
     </>
   )
