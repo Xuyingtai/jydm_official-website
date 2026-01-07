@@ -111,20 +111,7 @@
     position: relative;
   }
 
-  /* 遮罩层 - 最底层 */
-  .navbar-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(10px);
-    z-index: 9999;
-    animation: fadeIn 0.3s ease;
-  }
-
-  /* 菜单容器 - 中间层 */
+  /* 菜单容器 */
   .navbar-menu {
     position: fixed;
     top: 0;
@@ -139,7 +126,7 @@
     visibility: hidden;
     transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
     gap: 0;
-    z-index: 10000;
+    z-index: 99999;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     margin: 0;
