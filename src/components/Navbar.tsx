@@ -24,40 +24,48 @@ const Navbar = () => {
   }
 
   return (
-    <nav className="navbar">
-      <div className="container">
-        <div className="navbar-content">
-          <Link to="/" className="navbar-logo">
-            <img src="/images/logo/logo-1.png" alt="吉音动漫" className="logo-image" />
-            <h1>吉音动漫</h1>
-          </Link>
-          
-          <button
-            className="navbar-toggle"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
+    <>
+      <nav className="navbar">
+        <div className="container">
+          <div className="navbar-content">
+            <Link to="/" className="navbar-logo">
+              <img src="/images/logo/logo-1.png" alt="吉音动漫" className="logo-image" />
+              <h1>吉音动漫</h1>
+            </Link>
+            
+            <button
+              className="navbar-toggle"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
 
-          <ul className={`navbar-menu ${isMenuOpen ? 'active' : ''}`}>
-            {navItems.map((item) => (
-              <li key={item.path}>
-                <Link
-                  to={item.path}
-                  className={isActive(item.path) ? 'active' : ''}
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
+            <ul className={`navbar-menu ${isMenuOpen ? 'active' : ''}`}>
+              {navItems.map((item) => (
+                <li key={item.path}>
+                  <Link
+                    to={item.path}
+                    className={isActive(item.path) ? 'active' : ''}
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+      {isMenuOpen && (
+        <div 
+          className="navbar-overlay"
+          onClick={() => setIsMenuOpen(false)}
+        ></div>
+      )}
+    </>
   )
 }
 
