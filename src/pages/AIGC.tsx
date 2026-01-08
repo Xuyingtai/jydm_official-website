@@ -25,15 +25,32 @@ const AIGC = () => {
                 <span className="button-glow"></span>
               </a>
             </div>
-            <div className="aigc-showcase-image">
-              <img src="/images/cases/AIGC展示图片.png" alt="AIGC展示图片" />
-            </div>
             <h2>关于AIGC创作平台</h2>
             <p>
               AIGC（AI Generated Content）创作平台是我们利用人工智能技术打造的创新内容创作平台。
               通过AI技术，我们可以更高效地创作动画内容，同时保持创意和品质。平台结合了传统动画制作经验
               和前沿AI技术，为创作者提供全新的创作体验。
             </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="section aigc-showcase-section">
+        <div className="container">
+          <div className="aigc-showcase-image">
+            <img 
+              src="/images/cases/AIGC展示图片.png" 
+              alt="AIGC展示图片"
+              onError={(e) => {
+                console.error('Image load error for AIGC展示图片');
+                const target = e.target as HTMLImageElement;
+                const pathParts = target.src.split('/');
+                const fileName = pathParts.pop() || '';
+                const basePath = pathParts.join('/') + '/';
+                const encodedFileName = encodeURIComponent(fileName);
+                target.src = basePath + encodedFileName;
+              }}
+            />
           </div>
         </div>
       </div>
