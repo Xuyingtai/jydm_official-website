@@ -37,7 +37,7 @@ const Cases = () => {
     {
       id: 4,
       title: '国家电网-安全操作动画',
-      category: '三维动画',
+      category: '二维Flash+MG动画',
       description: '为国家电网制作的安全操作规范动画，通过三维动画展示正确的操作流程。',
       image: '/images/cases/国家电网-完全操作演示.jpg'
     },
@@ -51,7 +51,7 @@ const Cases = () => {
     {
       id: 6,
       title: '中粮储-家佳康饲料关展示动画',
-      category: '三维动画',
+      category: '二维Flash+MG动画',
       description: '使用三维动画技术展示家佳康饲料的生产流程和产品特点。',
       image: '/images/cases/内蒙古草原农夫硬麦粉-动画宣传片.jpg'
     },
@@ -72,7 +72,7 @@ const Cases = () => {
     {
       id: 9,
       title: '高铁安检模块化改造升级动画宣传片',
-      category: '三维动画',
+      category: '二维Flash+MG动画',
       description: '通过三维动画展示高铁安检模块化改造升级的技术方案和优势。',
       image: '/images/cases/郑州高铁安检模块化改造.jpg'
     },
