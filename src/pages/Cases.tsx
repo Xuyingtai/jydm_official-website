@@ -262,12 +262,21 @@ const Cases = () => {
               >
                 <div className="case-item-image">
                   <img 
-                    src={encodeURI(caseItem.image)} 
+                    src={caseItem.image} 
                     alt={caseItem.title}
+                    loading="lazy"
                     onError={(e) => {
-                      console.error('Image load error:', caseItem.image);
+                      console.error('Image load error for:', caseItem.title);
+                      console.error('Original path:', caseItem.image);
                       const target = e.target as HTMLImageElement;
-                      target.style.display = 'none';
+                      // 尝试使用编码后的文件名
+                      const pathParts = caseItem.image.split('/');
+                      const fileName = pathParts.pop() || '';
+                      const basePath = pathParts.join('/') + '/';
+                      const encodedFileName = encodeURIComponent(fileName);
+                      const newPath = basePath + encodedFileName;
+                      console.log('Trying encoded path:', newPath);
+                      target.src = newPath;
                     }}
                   />
                   <div className="case-item-overlay">
