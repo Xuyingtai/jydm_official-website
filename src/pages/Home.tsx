@@ -45,10 +45,10 @@ const Home = () => {
       image: '/images/cases/我与宪法-郑州市统计局政策.jpg'
     },
     {
-      id: 2,
-      title: 'VR360全景视频拍摄-印尼美娜多的日出横屏',
-      category: 'VR360全景视频',
-      image: '/images/cases/VR360全景视频拍摄-印尼美娜多的日出-横屏.jpg'
+      id: 30,
+      title: '中国电建地热-动画宣传片',
+      category: '二维Flash+MG动画',
+      image: '/images/cases/中国电建地热-动画宣传片-2.jpg'
     },
     {
       id: 4,
