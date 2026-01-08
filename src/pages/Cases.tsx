@@ -142,14 +142,14 @@ const Cases = () => {
     {
       id: 19,
       title: '内蒙古大窑饮品-动画宣传片',
-      category: '二维Flash+MG动画',
+      category: '影视拍摄',
       description: '为内蒙古大窑饮品制作的动画宣传片，展示产品特色和品牌形象。',
       image: '/images/cases/内蒙古大窑饮品.jpg'
     },
     {
       id: 20,
       title: '华硕口袋电脑-产品宣传动画',
-      category: '二维Flash+MG动画',
+      category: '影视拍摄',
       description: '为华硕口袋电脑制作的产品宣传动画，突出产品的便携性和功能特点。',
       image: '/images/cases/华硕口袋电脑.jpg'
     },
