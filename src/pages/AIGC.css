@@ -11,6 +11,25 @@
   align-items: center;
 }
 
+.aigc-showcase-image {
+  margin: 3rem auto;
+  max-width: 100%;
+  text-align: center;
+}
+
+.aigc-showcase-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3), 0 0 20px rgba(59, 130, 246, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.aigc-showcase-image img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(59, 130, 246, 0.4);
+}
+
 .intro-button {
   display: inline-flex;
   align-items: center;

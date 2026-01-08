@@ -25,6 +25,9 @@ const AIGC = () => {
                 <span className="button-glow"></span>
               </a>
             </div>
+            <div className="aigc-showcase-image">
+              <img src="/images/cases/AIGC展示图片.png" alt="AIGC展示图片" />
+            </div>
             <h2>关于AIGC创作平台</h2>
             <p>
               AIGC（AI Generated Content）创作平台是我们利用人工智能技术打造的创新内容创作平台。
