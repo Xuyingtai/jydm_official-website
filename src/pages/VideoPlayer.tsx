@@ -35,7 +35,7 @@ const VideoPlayer = () => {
     '27': 'https://player.youku.com/embed/XNDEwNjQxODM0MA==',
     '28': 'https://player.youku.com/embed/XNDA5ODEwMjc0NA==',
     '29': 'https://player.youku.com/embed/XNDEwNjMxMzgxNg==',
-    '30': 'https://player.youku.com/embed/XNDA4NzU2ODc0OA==',
+    '30': 'https://www.douyin.com/video/7573237439267966235',
     '2': 'https://player.youku.com/embed/XNDEwNjMwOTMxNg==',
     '3': 'https://player.youku.com/embed/XNDEwNjQyNTQ0OA==',
   }
@@ -60,7 +60,22 @@ const VideoPlayer = () => {
         {videoUrl ? (
           <div className="video-wrapper">
             {/* 判断视频URL类型，使用不同的嵌入方式 */}
-            {videoUrl.includes('bilibili.com') ? (
+            {videoUrl.includes('douyin.com') ? (
+              <div className="douyin-video-wrapper">
+                <div className="douyin-message">
+                  <p>该视频位于抖音平台</p>
+                  <p className="douyin-hint">点击下方按钮在新窗口中打开视频</p>
+                  <a 
+                    href={videoUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="douyin-link-button"
+                  >
+                    前往抖音观看视频 →
+                  </a>
+                </div>
+              </div>
+            ) : videoUrl.includes('bilibili.com') ? (
               <iframe
                 src={videoUrl}
                 scrolling="no"
