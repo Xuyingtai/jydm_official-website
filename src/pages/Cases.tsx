@@ -234,7 +234,7 @@ const Cases = () => {
       <div className="page-header">
         <div className="container">
           <h1>视频案例展示</h1>
-          <p>二维Flash+MG动画、三维动画、影视拍摄、VR360全景视频</p>
+          <p>二维Flash+MG动画、三维动画、影视拍摄、VR360全景视频、AIGC生成式内容创作</p>
         </div>
       </div>
 
