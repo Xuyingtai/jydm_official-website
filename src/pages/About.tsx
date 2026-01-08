@@ -31,6 +31,33 @@ const About = () => {
     }
   ]
 
+  const teamWorks = [
+    {
+      title: '猫和老鼠谁将被埋葬',
+      awards: [
+        '"金猴奖"最佳动画短片奖',
+        '日本广岛动画电影节最佳动画短片奖'
+      ],
+      description: '公司团队成员作品，与俄罗斯导演吉米特里·盖勒保持着项目上合作和沟通'
+    },
+    {
+      title: '程婴救孤案',
+      type: '戏曲动画电影',
+      description: '取得龙标，并在河南省内发行'
+    },
+    {
+      title: '心灵上的中国',
+      type: '社会主义核心价值观系列动画片',
+      description: '与河南电子音像出版社合作出版音像制品，同年入选河南省中小学生秋季电教教材目录'
+    },
+    {
+      title: '动画电影《十万个冷笑话2》',
+      type: '动画电影',
+      year: '2017年8月',
+      description: '2017年8月份全球上映，票房1.4亿'
+    }
+  ]
+
   return (
     <div className="about-page">
       <div className="page-header">
@@ -72,6 +99,42 @@ const About = () => {
                 <p>{value.description}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="section team-works-section">
+        <div className="container">
+          <h2 className="section-title">团队参与制作项目</h2>
+          <div className="team-works-list">
+            {teamWorks.map((work, index) => (
+              <div key={index} className="team-work-card">
+                <h3>{work.title}</h3>
+                {work.year && <span className="work-year">{work.year}</span>}
+                {work.type && <span className="work-type">{work.type}</span>}
+                {work.awards && (
+                  <div className="work-awards">
+                    {work.awards.map((award, i) => (
+                      <span key={i} className="award-badge">{award}</span>
+                    ))}
+                  </div>
+                )}
+                <p>{work.description}</p>
+              </div>
+            ))}
+          </div>
+          <div className="project-images-grid">
+            <div className="project-images-left">
+              <div className="project-image-card">
+                <img src="/images/laozi/十万个冷笑话海报.png" alt="十万个冷笑话海报" className="project-image" />
+              </div>
+              <div className="project-image-card">
+                <img src="/images/laozi/白峰农文旅宣传片.jpg" alt="白峰农文旅宣传片" className="project-image" />
+              </div>
+            </div>
+            <div className="project-image-card">
+              <img src="/images/laozi/制作项目集锦.png" alt="制作项目集锦" className="project-image" />
+            </div>
           </div>
         </div>
       </div>
