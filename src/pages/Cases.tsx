@@ -261,7 +261,15 @@ const Cases = () => {
                 style={{ cursor: 'pointer' }}
               >
                 <div className="case-item-image">
-                  <img src={caseItem.image} alt={caseItem.title} />
+                  <img 
+                    src={encodeURI(caseItem.image)} 
+                    alt={caseItem.title}
+                    onError={(e) => {
+                      console.error('Image load error:', caseItem.image);
+                      const target = e.target as HTMLImageElement;
+                      target.style.display = 'none';
+                    }}
+                  />
                   <div className="case-item-overlay">
                     <button className="btn btn-primary">播放视频</button>
                   </div>
